@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja - Nama Toko Anda</title>
+    <!-- Salin semua dari <head> index.html -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .font-display { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-pink-50 text-gray-800">
+
+    <!-- Salin <header> dari index.html (sesuaikan link aktif jika perlu) -->
+     <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-display text-3xl text-pink-600 font-bold">NamaTokoKue</a>
+            <nav class="space-x-4 hidden md:flex">
+                <a href="index.html" class="text-gray-600 hover:text-pink-600 transition duration-300">Beranda</a>
+                <a href="produk.html" class="text-gray-600 hover:text-pink-600 transition duration-300">Produk</a>
+                <a href="tentang.html" class="text-gray-600 hover:text-pink-600 transition duration-300">Tentang Kami</a>
+                <a href="kontak.html" class="text-gray-600 hover:text-pink-600 transition duration-300">Kontak</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="keranjang.html" class="text-pink-600 transition duration-300 relative"> <!-- Aktif -->
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                    <span class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-pink-600 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white py-2">
+            <a href="index.html" class="block px-6 py-2 text-gray-600 hover:bg-pink-100 hover:text-pink-600">Beranda</a>
+            <a href="produk.html" class="block px-6 py-2 text-gray-600 hover:bg-pink-100 hover:text-pink-600">Produk</a>
+            <a href="tentang.html" class="block px-6 py-2 text-gray-600 hover:bg-pink-100 hover:text-pink-600">Tentang Kami</a>
+            <a href="kontak.html" class="block px-6 py-2 text-gray-600 hover:bg-pink-100 hover:text-pink-600">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Main Content Keranjang -->
+    <main class="container mx-auto px-6 py-12">
+        <h1 class="font-display text-4xl md:text-5xl font-bold text-center text-pink-700 mb-10">Keranjang Belanja Anda</h1>
+
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-xl">
+            <!-- Daftar Item Keranjang -->
+            <div class="divide-y divide-gray-200">
+                <!-- Item 1 -->
+                <div class="py-6 flex flex-col sm:flex-row justify-between items-center">
+                    <div class="flex items-center mb-4 sm:mb-0">
+                        <img src="https://via.placeholder.com/100x100?text=Kue+Cokelat" alt="Kue Cokelat" class="w-24 h-24 object-cover rounded-md mr-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-pink-700">Kue Cokelat Klasik</h3>
+                            <p class="text-sm text-gray-500">Ukuran: Sedang</p>
+                            <button class="text-xs text-red-500 hover:text-red-700 mt-1"><i class="fas fa-trash-alt mr-1"></i> Hapus</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 sm:space-x-8">
+                        <div class="flex items-center border border-gray-300 rounded-md">
+                            <button class="px-3 py-1 text-gray-700 hover:bg-gray-100">-</button>
+                            <input type="text" value="1" class="w-10 text-center border-l border-r border-gray-300 py-1 focus:outline-none">
+                            <button class="px-3 py-1 text-gray-700 hover:bg-gray-100">+</button>
+                        </div>
+                        <p class="text-lg font-semibold text-pink-600">Rp 150.000</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="py-6 flex flex-col sm:flex-row justify-between items-center">
+                    <div class="flex items-center mb-4 sm:mb-0">
+                        <img src="https://via.placeholder.com/100x100?text=Red+Velvet" alt="Red Velvet" class="w-24 h-24 object-cover rounded-md mr-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-pink-700">Red Velvet Istimewa</h3>
+                            <p class="text-sm text-gray-500">Ukuran: Besar</p>
+                            <button class="text-xs text-red-500 hover:text-red-700 mt-1"><i class="fas fa-trash-alt mr-1"></i> Hapus</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 sm:space-x-8">
+                        <div class="flex items-center border border-gray-300 rounded-md">
+                            <button class="px-3 py-1 text-gray-700 hover:bg-gray-100">-</button>
+                            <input type="text" value="1" class="w-10 text-center border-l border-r border-gray-300 py-1 focus:outline-none">
+                            <button class="px-3 py-1 text-gray-700 hover:bg-gray-100">+</button>
+                        </div>
+                        <p class="text-lg font-semibold text-pink-600">Rp 230.000</p> <!-- (180rb + 50rb) -->
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="py-6 flex flex-col sm:flex-row justify-between items-center">
+                    <div class="flex items-center mb-4 sm:mb-0">
+                        <img src="https://via.placeholder.com/100x100?text=Cupcake" alt="Cupcake" class="w-24 h-24 object-cover rounded-md mr-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-pink-700">Cupcake Vanilla (6 pcs)</h3>
+                            <p class="text-sm text-gray-500">Topping: Cokelat meses</p>
+                            <button class="text-xs text-red-500 hover:text-red-700 mt-1"><i class="fas fa-trash-alt mr-1"></i> Hapus</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 sm:space-x-8">
+                        <div class="flex items-center border border-gray-300 rounded-md">
+                            <button class="px-3 py-1 text-gray-700 hover:bg-gray-100">-</button>
+                            <input type="text" value="2" class="w-10 text-center border-l border-r border-gray-300 py-1 focus:outline-none">
+                            <button class="px-3 py-1 text-gray-700 hover:bg-gray-100">+</button>
+                        </div>
+                        <p class="text-lg font-semibold text-pink-600">Rp 180.000</p> <!-- (90rb x 2) -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ringkasan Pesanan -->
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-gray-600">Subtotal</p>
+                    <p class="text-lg font-semibold text-gray-800">Rp 560.000</p>
+                </div>
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-gray-600">Diskon (jika ada)</p>
+                    <p class="text-lg font-semibold text-green-600">- Rp 0</p>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                    <p class="text-gray-600">Biaya Pengiriman</p>
+                    <p class="text-lg font-semibold text-gray-800">Rp 25.000</p>
+                </div>
+                <div class="flex justify-between items-center text-xl font-bold text-pink-700">
+                    <p>Total Pembayaran</p>
+                    <p>Rp 585.000</p>
+                </div>
+            </div>
+
+            <!-- Tombol Aksi -->
+            <div class="mt-10 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <a href="produk.html" class="text-pink-600 hover:text-pink-700 font-medium transition duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i> Lanjutkan Belanja
+                </a>
+                <button type="button" class="w-full sm:w-auto bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-10 rounded-full text-lg transition duration-300">
+                    Lanjut ke Pembayaran <i class="fas fa-credit-card ml-2"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Jika keranjang kosong -->
+        <!-- <div class="text-center py-20">
+            <i class="fas fa-shopping-basket text-6xl text-gray-400 mb-6"></i>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3">Keranjang Belanja Anda Kosong</h2>
+            <p class="text-gray-500 mb-6">Sepertinya Anda belum menambahkan kue apapun ke keranjang.</p>
+            <a href="produk.html" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300">
+                Mulai Belanja Sekarang <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div> -->
+
+    </main>
+
+    <!-- Salin <footer> dari index.html -->
+    <footer class="bg-gray-800 text-gray-300 py-12 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-display text-xl text-pink-400 font-semibold mb-4">NamaTokoKue</h4>
+                    <p class="text-sm">Menghadirkan kelezatan kue buatan tangan.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-pink-400 transition duration-300">Beranda</a></li>
+                        <li><a href="produk.html" class="hover:text-pink-400 transition duration-300">Produk</a></li>
+                        <li><a href="tentang.html" class="hover:text-pink-400 transition duration-300">Tentang Kami</a></li>
+                        <li><a href="kontak.html" class="hover:text-pink-400 transition duration-300">Kontak</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300 text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p>© <span id="currentYear"></span> NamaTokoKue. Semua Hak Dilindungi.</p>
+                <p>Didesain dengan <i class="fas fa-heart text-pink-500"></i> oleh Anda</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Salin <script> dari index.html -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        document.querySelectorAll('nav a[href^="#"], #mobile-menu a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.pathname === window.location.pathname && this.hash) {
+                    e.preventDefault();
+                    if (mobileMenu) mobileMenu.classList.add('hidden');
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else if (mobileMenu) {
+                     mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        const currentYearEl = document.getElementById('currentYear');
+        if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

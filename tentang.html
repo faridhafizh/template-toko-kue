@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Nama Toko Anda</title>
+    <!-- Salin semua dari <head> index.html -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .font-display { font-family: 'Playfair Display', serif; }
+        .about-hero-bg {
+            background-image: url('https://via.placeholder.com/1920x500?text=Cerita+Kami');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-pink-50 text-gray-800">
+
+    <!-- Salin <header> dari index.html -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-display text-3xl text-pink-600 font-bold">NamaTokoKue</a>
+            <nav class="space-x-4 hidden md:flex">
+                <a href="index.html" class="text-gray-600 hover:text-pink-600 transition duration-300">Beranda</a>
+                <a href="produk.html" class="text-gray-600 hover:text-pink-600 transition duration-300">Produk</a>
+                <a href="tentang.html" class="text-pink-600 font-semibold transition duration-300">Tentang Kami</a> <!-- Aktif -->
+                <a href="kontak.html" class="text-gray-600 hover:text-pink-600 transition duration-300">Kontak</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="keranjang.html" class="text-gray-600 hover:text-pink-600 transition duration-300 relative">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                    <span class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-pink-600 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white py-2">
+            <a href="index.html" class="block px-6 py-2 text-gray-600 hover:bg-pink-100 hover:text-pink-600">Beranda</a>
+            <a href="produk.html" class="block px-6 py-2 text-gray-600 hover:bg-pink-100 hover:text-pink-600">Produk</a>
+            <a href="tentang.html" class="block px-6 py-2 text-pink-600 bg-pink-100">Tentang Kami</a> <!-- Aktif -->
+            <a href="kontak.html" class="block px-6 py-2 text-gray-600 hover:bg-pink-100 hover:text-pink-600">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Tentang Kami -->
+    <section class="about-hero-bg text-white py-20 md:py-28">
+        <div class="container mx-auto px-6 text-center bg-black bg-opacity-50 p-10 rounded-lg">
+            <h1 class="font-display text-4xl md:text-6xl font-bold mb-4">Tentang NamaTokoKue</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto">Lebih dari sekadar kue, kami menyajikan kebahagiaan.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Tentang Kami -->
+    <main class="container mx-auto px-6 py-16">
+        <section class="mb-16">
+            <div class="flex flex-col md:flex-row items-center gap-12 bg-white p-8 md:p-12 rounded-lg shadow-xl">
+                <div class="md:w-2/5">
+                    <img src="https://via.placeholder.com/500x600?text=Tim+Kami" alt="Tim Toko Kue Kami" class="rounded-lg shadow-lg object-cover w-full h-full">
+                </div>
+                <div class="md:w-3/5">
+                    <h2 class="font-display text-3xl font-bold text-pink-700 mb-6">Misi & Visi Kami</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Di NamaTokoKue, misi kami adalah untuk menciptakan momen-momen manis tak terlupakan bagi setiap pelanggan melalui kue-kue berkualitas tinggi yang dibuat dengan penuh cinta dan kreativitas. Kami percaya bahwa setiap gigitan haruslah sebuah pengalaman yang menyenangkan.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Visi kami adalah menjadi toko kue pilihan utama di komunitas, dikenal karena inovasi, kualitas bahan, dan pelayanan yang ramah. Kami berkomitmen untuk menggunakan bahan-bahan segar dan alami, serta mendukung produsen lokal sebisa mungkin.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Setiap resep kami telah diuji dan disempurnakan selama bertahun-tahun, menggabungkan teknik tradisional dengan sentuhan modern untuk menghasilkan cita rasa yang unik dan memuaskan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="font-display text-3xl font-bold text-center text-pink-700 mb-10">Mengapa Memilih Kami?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-pink-600 text-5xl mb-4"><i class="fas fa-birthday-cake"></i></div>
+                    <h3 class="text-xl font-semibold text-pink-700 mb-2">Kualitas Terbaik</h3>
+                    <p class="text-gray-600 text-sm">Kami hanya menggunakan bahan-bahan segar dan berkualitas premium.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-pink-600 text-5xl mb-4"><i class="fas fa-heart"></i></div>
+                    <h3 class="text-xl font-semibold text-pink-700 mb-2">Dibuat dengan Cinta</h3>
+                    <p class="text-gray-600 text-sm">Setiap kue dibuat oleh baker berpengalaman dengan penuh ketelitian.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-pink-600 text-5xl mb-4"><i class="fas fa-shipping-fast"></i></div>
+                    <h3 class="text-xl font-semibold text-pink-700 mb-2">Layanan Pelanggan</h3>
+                    <p class="text-gray-600 text-sm">Kami siap membantu Anda untuk setiap kebutuhan kue Anda.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center bg-pink-100 p-8 md:p-12 rounded-lg">
+             <h2 class="font-display text-3xl font-bold text-pink-700 mb-6">Temui Tim Kami</h2>
+             <p class="text-gray-600 mb-8 max-w-lg mx-auto">Kami adalah sekelompok individu yang bersemangat tentang baking dan seni membuat kue. Kenali orang-orang di balik kelezatan NamaTokoKue.</p>
+             <!-- Tambahkan foto tim jika ada -->
+             <a href="kontak.html" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300">
+                Hubungi Kami <i class="fas fa-paper-plane ml-2"></i>
+            </a>
+        </section>
+    </main>
+
+    <!-- Salin <footer> dari index.html -->
+     <footer class="bg-gray-800 text-gray-300 py-12 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-display text-xl text-pink-400 font-semibold mb-4">NamaTokoKue</h4>
+                    <p class="text-sm">Menghadirkan kelezatan kue buatan tangan.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-pink-400 transition duration-300">Beranda</a></li>
+                        <li><a href="produk.html" class="hover:text-pink-400 transition duration-300">Produk</a></li>
+                        <li><a href="tentang.html" class="text-pink-400 transition duration-300">Tentang Kami</a></li> <!-- Aktif -->
+                        <li><a href="kontak.html" class="hover:text-pink-400 transition duration-300">Kontak</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300 text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p>© <span id="currentYear"></span> NamaTokoKue. Semua Hak Dilindungi.</p>
+                <p>Didesain dengan <i class="fas fa-heart text-pink-500"></i> oleh Anda</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Salin <script> dari index.html -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        document.querySelectorAll('nav a[href^="#"], #mobile-menu a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.pathname === window.location.pathname && this.hash) {
+                    e.preventDefault();
+                    if (mobileMenu) mobileMenu.classList.add('hidden');
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else if (mobileMenu) {
+                     mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        const currentYearEl = document.getElementById('currentYear');
+        if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
